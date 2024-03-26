@@ -1,0 +1,173 @@
+{
+  "Users": [
+    {
+      "id": "1",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@example.com",
+      "password": "admin",
+      "type": "admin"
+    },
+    {
+      "id": "2",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "123",
+      "type": "organizer"
+    },
+    {
+      "id": "3",
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "123",
+      "type": "organizer"
+    },
+    {
+      "id": "4",
+      "first_name": "test",
+      "last_name": "test",
+      "email": "test@example.com",
+      "password": "123",
+      "type": "user"
+    },
+    {
+      "id": 5,
+      "first_name": "fname",
+      "last_name": "lname",
+      "email": "email@email.com",
+      "password": "123",
+      "type": "user"
+    }
+  ],
+  "Events": [
+    {
+      "id": "1",
+      "title": "Tech Conference 2024",
+      "description": "A conference on the latest technology trends.",
+      "location": "Convention Center, City X",
+      "start_date": "2024-07-15",
+      "end_date": "2024-07-17",
+      "organizer_id": 3,
+      "participants": [
+        1,
+        2,
+        4,
+        1
+      ],
+      "capacity": 500,
+      "registration_count": 300,
+      "upvotes": 0,
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "title": "Art Exhibition",
+      "description": "An exhibition showcasing local artists' work.",
+      "location": "Art Gallery, City Y",
+      "start_date": "2024-08-20",
+      "end_date": "2024-08-25",
+      "organizer_id": 2,
+      "participants": [
+        6,
+        7,
+        4,
+        4
+      ],
+      "capacity": 200,
+      "registration_count": 4,
+      "upvotes": 0,
+      "status": "cancelled"
+    },
+    {
+      "id": 3,
+      "title": "asdasd",
+      "description": "asdsad",
+      "location": "asdasd",
+      "start_date": "2024-03-27",
+      "end_date": "2024-03-28",
+      "organizer_id": "2",
+      "participants": [],
+      "capacity": "10",
+      "registration_count": 0,
+      "upvotes": 0,
+      "status": "active"
+    }
+  ],
+  "Requests": [
+    {
+      "id": "1",
+      "user_id": 2,
+      "type": "organizer",
+      "event_id": null,
+      "status": "disapproved"
+    },
+    {
+      "id": "2",
+      "user_id": 1,
+      "type": "join",
+      "event_id": "1",
+      "status": "approved"
+    },
+    {
+      "id": "3",
+      "user_id": 4,
+      "type": "join",
+      "event_id": "2",
+      "status": "approved"
+    }
+  ],
+  "Notifications": [
+    {
+      "id": "1",
+      "receiver": 2,
+      "title": "Request Disapproved",
+      "message": "Unfortunately you were declined",
+      "status": "unread"
+    },
+    {
+      "id": "2",
+      "receiver": 1,
+      "title": "Request Approved",
+      "message": "You are now part of the event 1",
+      "status": "unread"
+    },
+    {
+      "id": "3",
+      "receiver": 6,
+      "title": "Event cancelled",
+      "message": "Event Art Exhibition has been cancelled",
+      "status": "unread"
+    },
+    {
+      "id": "3",
+      "receiver": 7,
+      "title": "Event cancelled",
+      "message": "Event Art Exhibition has been cancelled",
+      "status": "unread"
+    },
+    {
+      "id": "5",
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 2",
+      "status": "read"
+    },
+    {
+      "id": "6",
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 2",
+      "status": "read"
+    },
+    {
+      "id": "7",
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 2",
+      "status": "read"
+    }
+  ],
+  "Reviews": []
+}

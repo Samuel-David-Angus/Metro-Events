@@ -3,11 +3,89 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Login from './pages/Login';
+import Admin from './pages/HomeAdmin';
+import Organizer from './pages/HomeOrganizer';
+import User from './pages/HomeUser';
+import ViewEvents from './pages/ViewEvents';
+import OrganizerRequests from './pages/OrganizerRequest';
+import JoinRequests from './pages/JoinRequest';
+import MyEvents from './pages/MyEvents';
+import JoinedEvents from './pages/JoinedEvents';
+import Notifications from './pages/Notifications';
+import CreateEvent from './pages/CreateEvent';
+import UserRegistration from './pages/UserRegistration';
+
+const router = createBrowserRouter([
+  {
+    path: '/register',
+    element: <UserRegistration/>
+  },
+  {
+    path: '/',
+    element: <Login/>
+  },
+  {
+    path: '/admin',
+    element: <Admin/>,
+    children: [
+      {
+        path: '/admin/events',
+        element: <ViewEvents />
+      },
+      {
+        path: '/admin/requests',
+        element: <OrganizerRequests />
+      }
+    ]
+  },
+  {
+    path: '/organizer',
+    element: <Organizer/>,
+    children: [
+      {
+        path: '/organizer/events',
+        element: <ViewEvents />
+      },
+      {
+        path: '/organizer/join_requests',
+        element: <JoinRequests />
+      },
+      {
+        path: '/organizer/my_events',
+        element: <MyEvents />
+      },
+      {
+        path: '/organizer/create_event',
+        element: <CreateEvent />
+      }
+    ]
+  },
+  {
+    path: '/user',
+    element: <User/>,
+    children: [
+      {
+        path: '/user/events',
+        element: <ViewEvents />
+      },
+      {
+        path: '/user/joined_events',
+        element: <JoinedEvents />
+      },
+      {
+        path: '/user/notifications',
+        element: <Notifications />
+      }
+    ]
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
