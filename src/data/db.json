@@ -57,6 +57,7 @@
         1
       ],
       "capacity": 500,
+      "review": "Last year's Tech Conference discussed electronics hardware.",
       "registration_count": 300,
       "upvotes": 0,
       "status": "active"
@@ -76,6 +77,7 @@
         4
       ],
       "capacity": 200,
+      "review": "The work of notable artists have been featured in past art exhibitions.",
       "registration_count": 4,
       "upvotes": 0,
       "status": "cancelled"
@@ -90,6 +92,7 @@
       "organizer_id": "2",
       "participants": [],
       "capacity": "10",
+      "review": "asdsad",
       "registration_count": 0,
       "upvotes": 0,
       "status": "active"
