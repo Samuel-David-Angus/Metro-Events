@@ -48,6 +48,22 @@ function JoinedEvents() {
   }
   
   function EventCard({ eventName, participants, upvotes, eid, data, setChange, change }) {
+    const handleUpvote = () => {
+        const result = window.confirm("Upvote event");
+        if (result) {
+            axios.patch(`http://localhost:3001/Events/${eid}`, { upvotes: upvotes + 1 })
+            .then (
+                response => {
+                    console.log("upvoted event", response.data)
+                    setChange(!change);
+                }
+            ).catch (
+                err => {
+                    console.log("error", err);
+                }
+            )
+        }
+      };
     const handleLeave = () => {
         const result = window.confirm("Leave event");
         if (result) {
@@ -78,6 +94,9 @@ function JoinedEvents() {
           <Typography variant="body2" color="textSecondary">
             Upvotes: {upvotes}
           </Typography>
+          <Button onClick={handleUpvote} variant="contained" color="primary" style={{ marginRight: '10px' }}>
+            Upvote
+          </Button>
           <Button onClick={handleLeave} variant="contained" color="primary">
             Leave
           </Button>
