@@ -157,7 +157,7 @@ function JoinRequests() {
           <Typography variant="body2" color="textSecondary" gutterBottom>
             Request from: {`${requester.first_name} ${requester.last_name}`}
           </Typography>
-          <Button onClick={handleApprove} variant="contained" color="primary">
+          <Button onClick={handleApprove} variant="contained" color="primary" style={{ marginRight: '10px' }}>
             Approve
           </Button>
           <Button onClick={handleDisapprove} variant="contained" color="primary">
