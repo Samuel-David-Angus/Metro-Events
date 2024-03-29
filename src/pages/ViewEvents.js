@@ -32,7 +32,7 @@ function ViewEvents() {
 
     return (
       <div className="ViewEvents">
-        <h1>ViewEvents</h1>
+        <h1>View Events</h1>
         {events.map(
             (event, index) => (<EventCard key={index} eventName={event.title} participants={event.participants.length} upvotes={event.upvotes} eid={event.id} data={data} />)
         )}
