@@ -39,7 +39,7 @@ function JoinedEvents() {
 
     return (
       <div className="JoinedEvents">
-        <h1>JoinedEvents</h1>
+        <h1>Joined Events</h1>
         {events.map(
             (event, index) => (<EventCard key={index} eventName={event.title} participants={event.participants} upvotes={event.upvotes} eid={event.id} data={data} setChange={setChange} change={change}/>)
         )}
