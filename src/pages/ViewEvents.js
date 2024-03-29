@@ -52,7 +52,7 @@ function ViewEvents() {
             if (result) {
               console.log("User clicked OK");
               const r = {
-                id: requests.length + 1,
+                id: (requests.length + 1).toString(),
                 user_id: parseInt(data.id),
                 type: "join",
                 event_id: eid,

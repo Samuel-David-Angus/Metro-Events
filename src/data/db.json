@@ -33,7 +33,7 @@
       "type": "user"
     },
     {
-      "id": 5,
+      "id": "5",
       "first_name": "fname",
       "last_name": "lname",
       "email": "email@email.com",
@@ -83,17 +83,21 @@
       "status": "cancelled"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "asdasd",
       "description": "asdsad",
       "location": "asdasd",
       "start_date": "2024-03-27",
       "end_date": "2024-03-28",
       "organizer_id": "2",
-      "participants": [],
+      "participants": [
+        4,
+        4,
+        4
+      ],
       "capacity": "10",
       "review": "asdsad",
-      "registration_count": 0,
+      "registration_count": 3,
       "upvotes": 0,
       "status": "active"
     }
@@ -118,6 +122,13 @@
       "user_id": 4,
       "type": "join",
       "event_id": "2",
+      "status": "approved"
+    },
+    {
+      "id": "4",
+      "user_id": 4,
+      "type": "join",
+      "event_id": "3",
       "status": "approved"
     }
   ],
@@ -170,6 +181,27 @@
       "title": "Request Approved",
       "message": "You are now part of the event 2",
       "status": "read"
+    },
+    {
+      "id": "8",
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 3",
+      "status": "unread"
+    },
+    {
+      "id": 9,
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 3",
+      "status": "unread"
+    },
+    {
+      "id": 10,
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event 3",
+      "status": "unread"
     }
   ],
   "Reviews": []
