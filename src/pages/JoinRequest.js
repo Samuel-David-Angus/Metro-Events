@@ -78,11 +78,12 @@ function JoinRequests() {
         .then(
             response => {
                 const notifs = response.data;
+                const event = events.find(e => e.id == req.event_id);
                 const send = {
                     id: notifs.length + 1,
                     receiver: req.user_id,
                     title: "Request Approved",
-                    message: "You are now part of the event " + req.event_id,
+                    message: "You are now part of the event " + event.title,
                     status: "unread"
                 }
                 return axios.post('http://localhost:3001/Notifications', send);
@@ -103,7 +104,7 @@ function JoinRequests() {
             }
         )
         const p = events.find(e => e.id == req.event_id);
-        const arr = [...p.participants,req.user_id];
+        const arr = [...p.participants,req.user_id.toString()];
         console.log(req.event_id);
         axios.patch(`http://localhost:3001/Events/${req.event_id}`, {participants: arr, registration_count: arr.length})
         .then(

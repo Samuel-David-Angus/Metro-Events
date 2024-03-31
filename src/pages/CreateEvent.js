@@ -19,7 +19,6 @@ function CreateEvent() {
             "organizer_id": 0,
             "participants": [],
             "capacity": 0,
-            "review": "",
             "registration_count": 0,
             "upvotes": 0,
             "status": "active"
@@ -119,15 +118,6 @@ function CreateEvent() {
                 label="Capacity"
                 type="number"
                 value={formData.capacity}
-                onChange={handleChange}
-                fullWidth
-                required
-                margin="normal"
-            />
-            <TextField
-                name="review"
-                label="Review"
-                value={formData.review}
                 onChange={handleChange}
                 fullWidth
                 required

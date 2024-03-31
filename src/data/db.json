@@ -44,60 +44,17 @@
   "Events": [
     {
       "id": "1",
-      "title": "Tech Conference 2024",
-      "description": "A conference on the latest technology trends.",
-      "location": "Convention Center, City X",
-      "start_date": "2024-07-15",
-      "end_date": "2024-07-17",
-      "organizer_id": 3,
-      "participants": [
-        1,
-        2,
-        4,
-        1
-      ],
-      "capacity": 500,
-      "review": "Last year's Tech Conference discussed electronics hardware.",
-      "registration_count": 300,
-      "upvotes": 0,
-      "status": "active"
-    },
-    {
-      "id": "2",
-      "title": "Art Exhibition",
-      "description": "An exhibition showcasing local artists' work.",
-      "location": "Art Gallery, City Y",
-      "start_date": "2024-08-20",
-      "end_date": "2024-08-25",
-      "organizer_id": 2,
-      "participants": [
-        6,
-        7,
-        4,
-        4
-      ],
-      "capacity": 200,
-      "review": "The work of notable artists have been featured in past art exhibitions.",
-      "registration_count": 4,
-      "upvotes": 0,
-      "status": "cancelled"
-    },
-    {
-      "id": "3",
-      "title": "asdasd",
-      "description": "asdsad",
-      "location": "asdasd",
-      "start_date": "2024-03-27",
-      "end_date": "2024-03-28",
+      "title": "react event",
+      "description": "we react",
+      "location": "react world",
+      "start_date": "2024-04-01",
+      "end_date": "2024-04-02",
       "organizer_id": "2",
       "participants": [
-        4,
-        4,
-        4
+        "4"
       ],
       "capacity": "10",
-      "review": "asdsad",
-      "registration_count": 3,
+      "registration_count": 1,
       "upvotes": 0,
       "status": "active"
     }
@@ -105,102 +62,32 @@
   "Requests": [
     {
       "id": "1",
-      "user_id": 2,
-      "type": "organizer",
-      "event_id": null,
-      "status": "disapproved"
+      "user_id": 4,
+      "type": "join",
+      "event_id": 1,
+      "status": "approved"
     },
     {
       "id": "2",
-      "user_id": 1,
+      "user_id": 4,
       "type": "join",
       "event_id": "1",
-      "status": "approved"
-    },
-    {
-      "id": "3",
-      "user_id": 4,
-      "type": "join",
-      "event_id": "2",
-      "status": "approved"
-    },
-    {
-      "id": "4",
-      "user_id": 4,
-      "type": "join",
-      "event_id": "3",
       "status": "approved"
     }
   ],
   "Notifications": [
     {
       "id": "1",
-      "receiver": 2,
-      "title": "Request Disapproved",
-      "message": "Unfortunately you were declined",
+      "receiver": 4,
+      "title": "Request Approved",
+      "message": "You are now part of the event react event",
       "status": "unread"
     },
     {
-      "id": "2",
-      "receiver": 1,
-      "title": "Request Approved",
-      "message": "You are now part of the event 1",
-      "status": "unread"
-    },
-    {
-      "id": "3",
-      "receiver": 6,
-      "title": "Event cancelled",
-      "message": "Event Art Exhibition has been cancelled",
-      "status": "unread"
-    },
-    {
-      "id": "3",
-      "receiver": 7,
-      "title": "Event cancelled",
-      "message": "Event Art Exhibition has been cancelled",
-      "status": "unread"
-    },
-    {
-      "id": "5",
+      "id": 2,
       "receiver": 4,
       "title": "Request Approved",
-      "message": "You are now part of the event 2",
-      "status": "read"
-    },
-    {
-      "id": "6",
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event 2",
-      "status": "read"
-    },
-    {
-      "id": "7",
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event 2",
-      "status": "read"
-    },
-    {
-      "id": "8",
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event 3",
-      "status": "unread"
-    },
-    {
-      "id": 9,
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event 3",
-      "status": "unread"
-    },
-    {
-      "id": 10,
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event 3",
+      "message": "You are now part of the event react event",
       "status": "unread"
     }
   ],
