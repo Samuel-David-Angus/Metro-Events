@@ -35,13 +35,13 @@ function ViewEvents() {
       <div className="ViewEvents">
         <h1>View Events</h1>
         {events.map(
-            (event, index) => (<EventCard key={index} eventName={event.title} participants={event.participants.length} upvotes={event.upvotes} description={event.description} eid={event.id} data={data} />)
+            (event, index) => (<EventCard key={index} eventName={event.title} description={event.description} participants={event.participants.length} upvotes={event.upvotes} review={event.review} eid={event.id} data={data} />)
         )}
       </div>
     );
   }
   
-  function EventCard({ eventName, participants, upvotes, description, eid, data }) {
+  function EventCard({ eventName, description, participants, upvotes, review, eid, data }) {
     const handleRequestJoin = () => {
       axios.get('http://localhost:3001/Requests')
       .then(
@@ -84,6 +84,9 @@ function ViewEvents() {
         <CardContent>
           <Typography variant="h5" component="h2">
             {eventName}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" gutterBottom>
+            Description: {description}
           </Typography>
           <Typography variant="body2" color="textSecondary" gutterBottom>
             Participants: {participants}
