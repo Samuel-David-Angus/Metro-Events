@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button, Typography, Container } from "@mui/material";
+import { TextField, Button, Container } from "@mui/material";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function UserRegistration() {
       .get(`http://localhost:3001/Users`)
       .then((response) => {
         const allUsers = response.data;
-        const newUserId = allUsers.length + 1;
+        const newUserId = (allUsers.length + 1).toString();
         const newUser = { ...formData, id: newUserId };
         console.log(newUser);
         return axios.post(`http://localhost:3001/Users`, newUser);

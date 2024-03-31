@@ -2,41 +2,25 @@
   "Users": [
     {
       "id": "1",
-      "first_name": "John",
-      "last_name": "Doe",
-      "email": "john.doe@example.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@example.com",
       "password": "admin",
       "type": "admin"
     },
     {
       "id": "2",
-      "first_name": "Jane",
-      "last_name": "Smith",
-      "email": "jane.smith@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@example.com",
       "password": "123",
       "type": "organizer"
     },
     {
       "id": "3",
-      "first_name": "Alice",
-      "last_name": "Johnson",
-      "email": "alice.johnson@example.com",
-      "password": "123",
-      "type": "organizer"
-    },
-    {
-      "id": "4",
-      "first_name": "test",
-      "last_name": "test",
-      "email": "test@example.com",
-      "password": "123",
-      "type": "user"
-    },
-    {
-      "id": "5",
-      "first_name": "fname",
-      "last_name": "lname",
-      "email": "email@email.com",
+      "first_name": "max",
+      "last_name": "payne",
+      "email": "max.payne@example.com",
       "password": "123",
       "type": "user"
     }
@@ -44,64 +28,69 @@
   "Events": [
     {
       "id": "1",
-      "title": "react event",
-      "description": "we react",
-      "location": "react world",
-      "start_date": "2024-04-01",
-      "end_date": "2024-04-02",
-      "organizer_id": "2",
-      "participants": [
-        "4"
-      ],
-      "capacity": "10",
-      "registration_count": 1,
-      "upvotes": 1,
-      "status": "active"
-    },
-    {
-      "id": 2,
-      "title": "nother1",
-      "description": "another",
-      "location": "notherworld",
-      "start_date": "2024-04-27",
-      "end_date": "2024-04-28",
+      "title": "My birthday",
+      "description": "birthday at my house",
+      "location": "House 1, Random City",
+      "start_date": "2024-04-20",
+      "end_date": "2024-04-21",
       "organizer_id": "2",
       "participants": [],
-      "capacity": "5",
+      "capacity": "20",
       "registration_count": 0,
       "upvotes": 0,
+      "status": "cancelled"
+    },
+    {
+      "id": "2",
+      "title": "Graduation party",
+      "description": "graduation party at my backyard",
+      "location": "House 1, Random City",
+      "start_date": "2024-04-26",
+      "end_date": "2024-04-27",
+      "organizer_id": "2",
+      "participants": [],
+      "capacity": "30",
+      "registration_count": 1,
+      "upvotes": 1,
       "status": "active"
     }
   ],
   "Requests": [
     {
       "id": "1",
-      "user_id": 4,
-      "type": "join",
-      "event_id": 1,
+      "user_id": "2",
+      "type": "organizer",
+      "event_id": null,
       "status": "approved"
     },
     {
       "id": "2",
-      "user_id": 4,
+      "user_id": 3,
       "type": "join",
-      "event_id": "1",
+      "event_id": "2",
       "status": "approved"
     }
   ],
   "Notifications": [
     {
       "id": "1",
-      "receiver": 4,
-      "title": "Request Approved",
-      "message": "You are now part of the event react event",
-      "status": "unread"
+      "receiver": "2",
+      "title": "Request Disapproved",
+      "message": "Declined",
+      "status": "read"
     },
     {
       "id": "2",
-      "receiver": 4,
+      "receiver": "2",
       "title": "Request Approved",
-      "message": "You are now part of the event react event",
+      "message": "You are now an organizer. Login again",
+      "status": "unread"
+    },
+    {
+      "id": "3",
+      "receiver": 3,
+      "title": "Request Approved",
+      "message": "You are now part of the event Graduation party",
       "status": "read"
     }
   ],

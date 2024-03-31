@@ -18,6 +18,7 @@ function User() {
           (request) =>
             request.user_id === data.id && request.type === "organizer"
         );
+        console.log(check);
         if (!check) {
           const result = window.confirm(
             "Send request to admin to be an event organizer"
@@ -25,8 +26,8 @@ function User() {
           if (result) {
             console.log("User clicked OK");
             const r = {
-              id: requests.length + 1,
-              user_id: parseInt(data.id),
+              id: (requests.length + 1).toString(),
+              user_id: parseInt(data.id).toString(),
               type: "organizer",
               event_id: null,
               status: "pending",
