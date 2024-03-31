@@ -22,7 +22,7 @@ function Admin() {
     }, [])
     return (
       <div className="Admin">
-        <AppBar position="static">
+        <AppBar position="static" sx={{bgcolor: 'red'}}>
         <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {data && `Admin: ${data.first_name} ${data.last_name}`}

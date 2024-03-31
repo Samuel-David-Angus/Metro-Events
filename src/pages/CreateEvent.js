@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './styles.css';
 
 function CreateEvent() {
     const location = useLocation();
@@ -49,7 +50,13 @@ function CreateEvent() {
                 formData.organizer_id = data.id;
                 axios.post(`http://localhost:3001/Events`, formData);
             }
-        ).catch (
+        ).then (
+            response2 => {
+                console.log("event created", response2);
+                alert("event created")
+            }
+        )
+        .catch (
             err => {
                 console.log("error", err);
             }

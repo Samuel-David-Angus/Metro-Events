@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
+import './styles.css';
 
 function JoinRequests() {
     const [JoinRequests, setJoinRequests] = useState([]);

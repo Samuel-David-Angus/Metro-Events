@@ -7,6 +7,7 @@ import { Link, useNavigate, useLocation, Outlet } from 'react-router-dom';
 import axios from 'axios';
 
 
+
 function User() {
     const location = useLocation();
     const data = location.state;

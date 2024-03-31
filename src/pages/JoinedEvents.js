@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import { useLocation } from "react-router-dom";
+import './styles.css';
 
 function JoinedEvents() {
     const [events, setEvents] = useState([]);

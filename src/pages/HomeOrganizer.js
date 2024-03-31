@@ -23,7 +23,7 @@ function Organizer() {
     }, [])
     return (
       <div className="Organizer">
-        <AppBar position="static">
+        <AppBar position="static" sx={{bgcolor: 'orange'}}>
         <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {data && `Organizer: ${data.first_name} ${data.last_name}`}

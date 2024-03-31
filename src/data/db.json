@@ -55,6 +55,20 @@
       ],
       "capacity": "10",
       "registration_count": 1,
+      "upvotes": 1,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "title": "nother1",
+      "description": "another",
+      "location": "notherworld",
+      "start_date": "2024-04-27",
+      "end_date": "2024-04-28",
+      "organizer_id": "2",
+      "participants": [],
+      "capacity": "5",
+      "registration_count": 0,
       "upvotes": 0,
       "status": "active"
     }
@@ -84,11 +98,11 @@
       "status": "unread"
     },
     {
-      "id": 2,
+      "id": "2",
       "receiver": 4,
       "title": "Request Approved",
       "message": "You are now part of the event react event",
-      "status": "unread"
+      "status": "read"
     }
   ],
   "Reviews": []

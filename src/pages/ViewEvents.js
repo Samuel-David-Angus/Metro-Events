@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import { useLocation } from "react-router-dom";
+import './styles.css';
 
 function ViewEvents() {
     const [events, setEvents] = useState([]);
@@ -34,13 +35,13 @@ function ViewEvents() {
       <div className="ViewEvents">
         <h1>View Events</h1>
         {events.map(
-            (event, index) => (<EventCard key={index} eventName={event.title} participants={event.participants.length} upvotes={event.upvotes} review={event.review} eid={event.id} data={data} />)
+            (event, index) => (<EventCard key={index} eventName={event.title} participants={event.participants.length} upvotes={event.upvotes} description={event.description} eid={event.id} data={data} />)
         )}
       </div>
     );
   }
   
-  function EventCard({ eventName, participants, upvotes, review, eid, data }) {
+  function EventCard({ eventName, participants, upvotes, description, eid, data }) {
     const handleRequestJoin = () => {
       axios.get('http://localhost:3001/Requests')
       .then(
@@ -91,7 +92,7 @@ function ViewEvents() {
             Upvotes: {upvotes}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            Review: {review}
+            Description: {description}
           </Typography>
           <Button onClick={handleRequestJoin} variant="contained" color="primary">
             Request to Join
